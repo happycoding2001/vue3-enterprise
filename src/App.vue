@@ -1,25 +1,21 @@
 <template>
   <div>
-      <MyComponent :ref="refHandler" />
+      <input ref="inputRef" />
+      <button @click="handleClick">Click me</button>
   </div>
 </template>
 <script>
-import { ref, onMounted } from 'vue';
-import MyComponent from './components/Test.vue';
 
+import { ref } from'vue';
 export default {
-components: {
-  MyComponent,
-},
 setup() {
-  const refHandler = (el) => {
-    console.log(el); // 打印组件实例或DOM元素
+  const inputRef = ref(null);
+  const handleClick = () => {
+    inputRef.value.value=10;
   };
-  onMounted(() => {
-    console.log(refHandler.value); 
-  });
   return {
-    refHandler,
+    inputRef,
+    handleClick,
   };
 },
 };
