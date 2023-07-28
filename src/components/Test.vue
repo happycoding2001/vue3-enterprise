@@ -1,14 +1,21 @@
 <template>
-    <div @click="add">{{ props.count }}</div>
-  </template>
-  
-  <script setup>
-  const props = defineProps({ count: Number })
-  console.log('props', props)
-  const emit = defineEmits(['add'])
+  <div>{{ props.count }}</div>
+</template>
 
-  const add = ()=>{
-    emit('add')
+<script>
+export default {
+  name: 'Test',
+  props: {
+    count: Number
+  },
+  setup(props) {
+    const testFn = () => {
+      console.log('我是测试方法')
+    }
+    return {
+      props,
+      testFn // 将这个测试方法 return 出去
+    }
   }
-  </script>
-  
+}
+</script>

@@ -1,18 +1,13 @@
 <template>
-  <Test @add="add" :count="count"></Test>
-  <button @click="add">点击</button>
+  <Test :count="count" ref="TestRef"></Test>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import Test from './components/Test.vue'
 
-const count = ref(0)
-count.value=10
+const count = ref(1)
+const TestRef = ref()
+console.log('TestRef', TestRef)
 
-
-
-const add = ()=>{
-  count.value+=10
-}
 </script>
