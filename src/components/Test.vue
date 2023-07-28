@@ -1,21 +1,13 @@
+// Test.vue
 <template>
   <div>{{ props.count }}</div>
 </template>
 
-<script>
-export default {
-  name: 'Test',
-  props: {
-    count: Number
-  },
-  setup(props) {
-    const testFn = () => {
-      console.log('我是测试方法')
-    }
-    return {
-      props,
-      testFn // 将这个测试方法 return 出去
-    }
-  }
+<script setup>
+const props = defineProps({ count: Number })
+const testFn = () => {
+  console.log('这是测试方法')
 }
+
+defineExpose({ testFn })
 </script>
