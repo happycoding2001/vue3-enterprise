@@ -1,4 +1,4 @@
-// Test.vue
+
 <template>
   <div>{{ props.count }}</div>
 </template>

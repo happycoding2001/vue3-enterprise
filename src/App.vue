@@ -1,13 +1,10 @@
 <template>
-  <Test :count="count" ref="TestRef"></Test>
+  <div ref='shisanRef'>十三</div>
 </template>
-
 <script setup>
-import { ref } from 'vue'
-import Test from './components/Test.vue'
-
-const count = ref(1)
-const TestRef = ref()
-console.log('TestRef', TestRef)
-
+import { ref, onMounted } from 'vue'
+const shisanRef = ref(null)
+onMounted(() => {
+  console.log(shisanRef)
+})
 </script>
