@@ -7,23 +7,22 @@
 </template>
 
 <script setup>
-import { reactive, watchEffect } from 'vue'
+import { reactive, watch } from 'vue'
 let timer = null
 let state = reactive({
-  search: Date.now()
+  search: Date.now(),
+  a:1,
+  b:'b',
 })
-watchEffect((onInvalidate) => {
-  console.log(`监听查询字段${state.search}`)
-  timer = setTimeout(() => {
-    console.log('模拟接口异步请求，3 秒之后返回详情信息')
-  }, 3000)
-  onInvalidate(() => {
-    console.log('清除');
-    clearTimeout(timer);
-  })
+watch(() => {
+  return state.a
+}, (nextData, preData) => {
+  console.log('preData', preData)
+  console.log('nextData', nextData)
 })
 
 const handleSearch = () => {
   state.search = Date.now()
+  state.a++
 }
 </script>
