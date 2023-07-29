@@ -1,28 +1,20 @@
 <template>
   <div>
-    <h1>{{ state.search }}</h1>
-    <button @click="handleSearch">改变查询字段</button>
+    <h1>提供/注入</h1>
+    <Father />
   </div>
 
 </template>
 
-<script setup>
-import { reactive, watch } from 'vue'
-let timer = null
-let state = reactive({
-  search: Date.now(),
-  a:1,
-  b:'b',
-})
-watch(() => {
-  return state.a
-}, (nextData, preData) => {
-  console.log('preData', preData)
-  console.log('nextData', nextData)
-})
+<script>
+import Father from './components/Father.vue'
 
-const handleSearch = () => {
-  state.search = Date.now()
-  state.a++
+export default {
+  components: {
+    Father
+  },
+  provide: {
+    name: '陈尼克'
+  }
 }
 </script>
