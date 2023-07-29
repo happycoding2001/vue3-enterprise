@@ -10,10 +10,10 @@ const router = createRouter({
     {
       path: "/",
       name: "index",
-      redirect: "/",
+      redirect: "/home",
     },
     {
-      path: "/home/:id",
+      path: "/home/:id?",
       name: "home",
       component: Home,
     },
