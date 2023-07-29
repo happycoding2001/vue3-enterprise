@@ -10,7 +10,7 @@ import {
 } from 'vue-router'
 const router = useRouter()
 const linkTo = () => {
-
+    
     router.push('/about')
 }
 
