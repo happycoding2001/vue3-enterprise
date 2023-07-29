@@ -6,13 +6,14 @@
 </div>
 </template>
 
-<script>
+<script setup>
 import {
-    provide
+    provide,ref,
 } from 'vue'
 import Father from './components/Father.vue'
+const name = ref('陈尼克')
 
-provide('name', '陈尼克') // 单个声明形式
+provide('name', name) // 单个声明形式
 provide('info', {
     work: '前端开发',
     age: '18'
