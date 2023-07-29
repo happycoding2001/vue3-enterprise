@@ -24,5 +24,9 @@ const router = createRouter({
     },
   ],
 });
-
+router.afterEach((to, from) => {
+    
+    console.log('path::', router.currentRoute.value.path)
+    // 点击的次数多了以后，这里console.log的执行次数 会2次3次4次递增
+})
 export default router;
