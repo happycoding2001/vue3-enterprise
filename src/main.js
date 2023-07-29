@@ -4,7 +4,7 @@ import ElementPlus from 'element-plus'
 import router from '@/router'
 
 // import 'element-plus/lib/theme-chalk/index.css';  会报错
-import 'element-plus/dist/index.css';  
+// import 'element-plus/dist/index.css';  这个似乎不需要引入，引入后主题切换会不生效
 
 // 生成 app 实例。
 const app = createApp(App)
