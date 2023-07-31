@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import Index from "../views/Index.vue";
 import AddGood from "../views/addGood.vue";
+import Login from "../views/Login.vue";
 
 const router = createRouter({
   history: createWebHashHistory(), // createWebHashHistory 为哈希模式的路由，如果需要选择 histiry 模式，可以用 createWebHistory 方法。
@@ -16,6 +17,11 @@ const router = createRouter({
       path: "/add",
       name: "add",
       component: AddGood,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     },
   ],
 });
