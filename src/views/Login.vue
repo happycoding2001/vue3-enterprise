@@ -134,6 +134,14 @@ const resetForm = () => {
     .login-form >>> .el-form-item {
         margin-bottom: 0;
     }
+    .login-form {
+        // :deep(.el-form-item){
+        //     margin-bottom: 50px;
+        // }
+        // .el-form-item{
+        //     margin-bottom: 50px;
+        // }
+    }
 
     
     
