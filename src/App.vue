@@ -30,20 +30,23 @@
         </el-aside>
         <!--右边内容布局-->
         <el-container class="content">
-        <div class="main">
-            <!--将 <router-view></router-view> 移到这里，并且用单标签-->
-            <router-view />
-        </div>
+            <Header />
+            <div class="main">
+                <!--将 <router-view></router-view> 移到这里，并且用单标签-->
+                <router-view />
+            </div>
+            <Footer />
         </el-container>
 
       </el-container>
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'App'
-  }
+  <script setup>
+  import Header from '@/components/Header.vue'
+  import Footer from '@/components/Footer.vue'
+
+
   </script>
   
   <style scoped>
@@ -81,6 +84,18 @@
   .line {
     border-top: 1px solid hsla(0,0%,100%,.05);
     border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .main {
+    height: 100vh;
+    overflow: auto;
+    padding: 10px;
   }
   </style>
   
