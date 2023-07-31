@@ -93,7 +93,7 @@
     overflow: hidden;
   }
   .main {
-    height: 100vh;
+    height: calc(100vh - 100px);
     overflow: auto;
     padding: 10px;
   }

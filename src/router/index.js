@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+import Index from "../views/Index.vue";
+import AddGood from "../views/addGood.vue";
 
 const router = createRouter({
   history: createWebHashHistory(), // createWebHashHistory 为哈希模式的路由，如果需要选择 histiry 模式，可以用 createWebHistory 方法。
@@ -10,17 +10,12 @@ const router = createRouter({
     {
       path: "/",
       name: "index",
-      redirect: "/home",
+      component: Index,
     },
     {
-      path: "/home/:id?",
-      name: "home",
-      component: Home,
-    },
-    {
-      path: "/about",
-      name: "about",
-      component: About,
+      path: "/add",
+      name: "add",
+      component: AddGood,
     },
   ],
 });
