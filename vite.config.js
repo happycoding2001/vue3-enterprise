@@ -1,4 +1,3 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
@@ -16,8 +15,7 @@ export default ({ mode }) => defineConfig({
         importStyle: 'sass'
       })],
     }),
-    // 用于内部方法调用，样式缺失的现象，如 ElMessage 等
-    ElementPlus({ useSource: true })
+    ElementPlus()
   ],
   resolve: {
     alias: {

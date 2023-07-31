@@ -1,7 +1,7 @@
 import axios from 'axios'
+import { ElMessage } from 'element-plus'
 import router from '@/router/index'
 import config from '~/config'
-import { ElMessage } from 'element-plus'
 import { localGet } from './index'
 
 
