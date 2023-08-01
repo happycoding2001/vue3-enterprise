@@ -120,9 +120,4 @@ const submitForm = () => {
     }
   })
 }
-
-defineExpose({
-  open,
-  close,
-})
 </script>

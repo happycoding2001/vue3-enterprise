@@ -78,7 +78,7 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, onUpdated, reactive, ref, toRefs, watchEffect } from 'vue'
+import { onMounted, onUnmounted, reactive, ref, toRefs, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { Plus, Delete } from '@element-plus/icons-vue'
@@ -105,19 +105,14 @@ onMounted(() => {
 watchEffect(() => {
   console.log(state.pageSize)
 })
-onUpdated(() => {
-  getCategory()
+const unwatch = router.afterEach((to) => {
+  // 每次路由变化的时候，都会触发监听时间，重新获取列表数据
+  if (['category', 'level2', 'level3'].includes(to.name)) {
+    getCategory()
+  }
 })
-// const unwatch = router.afterEach((to) => {
-//   // 每次路由变化的时候，都会触发监听时间，重新获取列表数据
-//   if (['category', 'level2', 'level3'].includes(to.name)) {
-//     getCategory()
-//   }
-// })
-
-
 onUnmounted(() => {
-  // unwatch()
+  unwatch()
 })
 // 获取分类列表
 const getCategory = () => {

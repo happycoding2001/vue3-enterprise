@@ -42,6 +42,7 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="/category"><el-icon><Menu /></el-icon>分类管理</el-menu-item>
+              <el-menu-item index="/good"><el-icon><Goods /></el-icon>商品管理</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
@@ -90,7 +91,6 @@ router.beforeEach((to, from, next) => {
     }
   }
   state.showMenu = !noMenu.includes(to.path)
-  
   state.currentPath = to.path
   document.title = pathMap[to.name]
 })
