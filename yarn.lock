@@ -1175,9 +1175,9 @@ string-hash@^1.1.1:
   integrity sha1-6Kr8CsGFW0Zmkp7X3RJ1311sgRs=
 
 strip-literal@^0.4.0:
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/strip-literal/-/strip-literal-0.4.1.tgz#fb9316ad35071c4229ed67aad1a0467e5a9b0c1a"
-  integrity sha512-z+F/xmDM8GOdvA5UoZXFxEnxdvMOZ+XEBIwjfLfc8hMSuHpGxjXAUCfuEo+t1GOHSb8+qgI/IBRpxXVMaABYWA==
+  version "0.4.2"
+  resolved "https://registry.npmmirror.com/strip-literal/-/strip-literal-0.4.2.tgz#4f9fa6c38bb157b924e9ace7155ebf8a2342cbcf"
+  integrity sha512-pv48ybn4iE1O9RLgCAN0iU4Xv7RlBTiit6DKmMiErbs9x1wH6vXBs45tWc0H5wUIF6TLTrKweqkmYF/iraQKNw==
   dependencies:
     acorn "^8.8.0"
 
@@ -1373,9 +1373,9 @@ webpack-sources@^3.2.3:
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
 webpack-virtual-modules@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.npmmirror.com/webpack-virtual-modules/-/webpack-virtual-modules-0.4.4.tgz#a19fcf371923c59c4712d63d7d194b1e4d8262cc"
-  integrity sha512-h9atBP/bsZohWpHnr+2sic8Iecb60GxftXsWNLLLSqewgIsGzByd2gcIID4nXcG+3tNe4GQG3dLcff3kXupdRA==
+  version "0.4.5"
+  resolved "https://registry.npmmirror.com/webpack-virtual-modules/-/webpack-virtual-modules-0.4.5.tgz#e476842dab5eafb7beb844aa2f747fc12ebbf6ec"
+  integrity sha512-8bWq0Iluiv9lVf9YaqWQ9+liNgXSHICm+rg544yRgGYaR8yXZTVBaHZkINZSB2yZSWo4b0F6MIxqJezVfOEAlg==
 
 yallist@^3.0.2:
   version "3.1.1"
