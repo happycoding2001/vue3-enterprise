@@ -2,7 +2,7 @@
   <div class="login-body">
     <div class="login-container">
       <div class="head">
-        <img class="logo" src="https://s.weituibao.com/1582958061265/mlogo.png" />
+        <img class="logo" src="https://s.yezgea02.com/1582958061265/mlogo.png" />
         <div class="name">
           <div class="title">新蜂商城</div>
           <div class="tips">Vue3.0 后台管理系统</div>
@@ -110,6 +110,6 @@ const resetForm = () => {
     padding: 0;
   }
   .login-form >>> .el-form-item {
-    /* margin-bottom: 0; */
+    margin-bottom: 0;
   }
 </style>
