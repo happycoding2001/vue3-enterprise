@@ -43,7 +43,16 @@
             <el-menu-item-group>
               <el-menu-item index="/category"><el-icon><Menu /></el-icon>分类管理</el-menu-item>
               <el-menu-item index="/good"><el-icon><Goods /></el-icon>商品管理</el-menu-item>
+              <el-menu-item index="/guest"><el-icon><User /></el-icon>会员管理</el-menu-item>
               <el-menu-item index="/order"><el-icon><List /></el-icon>订单管理</el-menu-item>
+            </el-menu-item-group>
+          </el-sub-menu>
+          <el-sub-menu index="4">
+            <template #title>
+              <span>系统管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/account"><el-icon><Lock /></el-icon>修改密码</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
@@ -73,7 +82,7 @@ const noMenu = ['/login']
 const router = useRouter()
 const state = reactive({
   showMenu: true,
-  defaultOpen: ['1', '2', '3'],
+  defaultOpen: ['1', '2', '3', '4'],
   currentPath: '/',
 })
 
